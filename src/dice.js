@@ -1,5 +1,8 @@
 class Dice {
     constructor(sides) {
+        if (!Number.isInteger(sides) || sides < 1) {
+            throw new Error('Sides must be a positive integer');
+        }
         this.sides = sides;
     }
 
